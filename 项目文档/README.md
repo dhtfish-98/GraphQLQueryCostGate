@@ -1,6 +1,6 @@
 # GraphQLQueryCostGate
 
-**Local version 0.1.0. Author and maintainer: dhtfish98.** This is an independently written defensive lab, using a synthetic, loopback-only GraphQL service. It compares an intentionally weak no-budget baseline with a fixed pre-execution cost gate. It makes no claim that the studied upstream project has a vulnerability.
+**Local version 0.1.1. Author and maintainer: dhtfish98.** This is an independently written defensive lab, using a synthetic, loopback-only GraphQL service. It compares an intentionally weak no-budget baseline with a fixed pre-execution cost gate. It makes no claim that the studied upstream project has a vulnerability.
 
 The fixed mode parses and validates one query, coerces variables, expands the selected operation's fragments, and estimates schema-weighted work. An aliased field contributes again; `first` multiplies its nested selection cost. The 120-unit budget is checked **before** GraphQL execution, so an over-budget request must produce zero resolver calls. For inputs that also fit the byte limits, fixed and baseline modes return the same data and resolver counts. Every synthetic resolver is counted.
 
