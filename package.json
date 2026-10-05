@@ -1,6 +1,6 @@
 {
   "name": "graphql-query-cost-gate",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "Local synthetic GraphQL query cost gate with pre-resolver budget checks",
   "author": "dhtfish98",

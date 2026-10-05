@@ -13,7 +13,7 @@ async function main() {
   assert.ok(installedPath.startsWith(path.join(consumer, 'node_modules') + path.sep));
   const gate = requireFromConsumer('graphql-query-cost-gate');
   const metadata = requireFromConsumer('graphql-query-cost-gate/package.json');
-  assert.equal(metadata.version, '0.1.1');
+  assert.equal(metadata.version, '0.1.2');
   assert.equal(metadata.author, 'dhtfish98');
   assert.equal(metadata.license, 'MIT');
   const lowQuery = 'query{tenant(id:"lab"){projects(first:2){tasks(first:2){label}}}}';
